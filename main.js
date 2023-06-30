@@ -32,22 +32,22 @@ function playRound(playerSelection) {
   if (playerSelection == computerSelection) {
     resultDisplay.textContent = "It's a tie!";
   } else if (playerSelection == "rock" && computerSelection == "paper") {
-    resultDisplay.textContent = "You Lose! Paper beats Rock!";
+    resultDisplay.textContent = "負けた! Paper beats Rock!";
     computerScore += 1;
   } else if (playerSelection == "rock" && computerSelection == "scissors") {
-    resultDisplay.textContent = "You win! Rock beats Scissors!";
+    resultDisplay.textContent = "勝った! Rock beats Scissors!";
     playerScore += 1;
   } else if (playerSelection == "paper" && computerSelection == "rock") {
-    resultDisplay.textContent = "You Win! Paper beats Rock!";
+    resultDisplay.textContent = "勝った! Paper beats Rock!";
     playerScore += 1;
   } else if (playerSelection == "paper" && computerSelection == "scissors") {
-    resultDisplay.textContent = "You Lose! Scissors beat Paper!";
+    resultDisplay.textContent = "負けた! Scissors beat Paper!";
     computerScore += 1;
   } else if (playerSelection == "scissors" && computerSelection == "rock") {
-    resultDisplay.textContent = "You Lose! Rock beats Scissors!";
+    resultDisplay.textContent = "負けた! Rock beats Scissors!";
     computerScore += 1;
   } else if (playerSelection == "scissors" && computerSelection == "paper") {
-    resultDisplay.textContent = "You win! Scissors beat paper!";
+    resultDisplay.textContent = "勝った! Scissors beat paper!";
     playerScore += 1;
   }
 
