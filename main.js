@@ -32,22 +32,22 @@ function playRound(playerSelection) {
   if (playerSelection == computerSelection) {
     resultDisplay.textContent = "It's a tie!";
   } else if (playerSelection == "rock" && computerSelection == "paper") {
-    resultDisplay.textContent = "負けた! Paper beats Rock!";
+    resultDisplay.textContent = "負けた!\r\nPaper beats Rock!";
     computerScore += 1;
   } else if (playerSelection == "rock" && computerSelection == "scissors") {
-    resultDisplay.textContent = "勝った! Rock beats Scissors!";
+    resultDisplay.textContent = "勝った!\r\nRock beats Scissors!";
     playerScore += 1;
   } else if (playerSelection == "paper" && computerSelection == "rock") {
-    resultDisplay.textContent = "勝った! Paper beats Rock!";
+    resultDisplay.textContent = "勝った!\r\nPaper beats Rock!";
     playerScore += 1;
   } else if (playerSelection == "paper" && computerSelection == "scissors") {
-    resultDisplay.textContent = "負けた! Scissors beat Paper!";
+    resultDisplay.textContent = "負けた!\r\nScissors beat Paper!";
     computerScore += 1;
   } else if (playerSelection == "scissors" && computerSelection == "rock") {
-    resultDisplay.textContent = "負けた! Rock beats Scissors!";
+    resultDisplay.textContent = "負けた!\r\nRock beats Scissors!";
     computerScore += 1;
   } else if (playerSelection == "scissors" && computerSelection == "paper") {
-    resultDisplay.textContent = "勝った! Scissors beat paper!";
+    resultDisplay.textContent = "勝った!\r\nScissors beat paper!";
     playerScore += 1;
   }
 
@@ -65,3 +65,8 @@ function playRound(playerSelection) {
 const playerScoreDisplay = document.getElementById("player-score");
 const computerScoreDisplay = document.getElementById("computer-score");
 const resultDisplay = document.getElementById("result-container");
+
+const header = document.getElementById("header");
+header.addEventListener("click", () => {
+  window.location.reload();
+})
