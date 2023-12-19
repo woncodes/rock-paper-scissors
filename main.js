@@ -53,10 +53,10 @@ function playRound(playerSelection) {
 
   if (playerScore == 5 && computerScore < 5) {
     resultDisplay.textContent = "Congrats! You've won the game!";
-    controller.abort();
+    gameEnd();
   } else if (computerScore == 5 && playerScore < 5) {
     resultDisplay.textContent = "Aw... You've lost. Better luck next time!";
-    controller.abort();
+    gameEnd();
   }
 
   displayScore();
@@ -70,3 +70,14 @@ const header = document.getElementById("header");
 header.addEventListener("click", () => {
   window.location.reload();
 })
+
+const restartButton = document.getElementById("restart-button");
+restartButton.addEventListener("click", () => {
+  window.location.reload();
+})
+
+function gameEnd() {
+  controller.abort();
+
+  restartButton.style.display = "block";
+}
